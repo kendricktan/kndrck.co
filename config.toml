@@ -36,11 +36,6 @@ googleAnalytics = "UA-71060764-2"
     icon = "github"
     url = "https://github.com/kendricktan"
 
-[[params.social]]
-    name = "Instagram"
-    icon = "instagram"
-    url = "https://instagram.com/mr.miso.oz"
-
 [menu]
 [[menu.main]]
     name = "About"
