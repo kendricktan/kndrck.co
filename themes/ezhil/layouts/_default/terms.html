@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+{{ partial "header.html" . }}
+
+<body>
+	<div class="container wrapper tags">
+		{{ partial "head.html" . }}
+
+		<h2 class="page-title">{{ .Title }}</h2>
+
+		{{ with .Content }}{{ . }}{{ end }}
+
+		{{ $data := .Data }}
+		<div class="tag-cloud">
+		{{ range $key, $value := .Data.Terms.Alphabetical }}
+			<a style="font-size: 1rem;" href="{{ $.Site.LanguagePrefix | absURL }}{{ $data.Plural }}/{{ $value.Name | urlize }}/">{{ humanize $value.Name }}</a>
+		{{ end }}
+		</div>
+	</div>
+
+	{{ partial "footer.html" . }}
+</body>
+
+</html>

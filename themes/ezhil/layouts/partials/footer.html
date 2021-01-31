@@ -1,0 +1,31 @@
+<div class="footer wrapper">
+	<nav class="nav">
+		{{ .Site.Params.footerCopyright | safeHTML }} | <a href="http://github.com/kendricktan/kndrck.co">MIT Licensed</a></div>
+	</nav>
+</div>
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML-full">
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: { equationNumbers: { autoNumber: "AMS" } },
+    tex2jax: {
+      inlineMath: [ ['\\(','\\)'] ],
+      processEscapes: true,
+    },
+    "HTML-CSS": {                  
+      linebreaks: {                  
+        automatic: true                   
+      }                  
+    }
+  });
+</script>
+
+{{ if not .Site.IsServer }}
+{{ template "_internal/google_analytics_async.html" . }}
+{{ end }}
+{{- with .Site.Params.Social -}}
+<script>feather.replace()</script>
+{{- end -}}

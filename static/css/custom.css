@@ -1,0 +1,76 @@
+h1, h2, h3, h4, h5 {
+  font-weight: bold;
+  margin-bottom: 0px;
+}
+
+h1 {
+  margin-top: 66px;
+}
+
+h2 {
+  margin-top: 50px;
+}
+
+h5 {
+  text-align: center;
+}
+
+body {
+  font-family: "benton-sans", "Roboto", sans-serif;
+}
+
+.posts {
+  list-style: none;
+  padding-left: 0;
+  margin: 0px;
+}
+
+.post {
+  margin-bottom: 5px;
+}
+
+.h4-title {
+  opacity: 0.4;
+}
+
+.list-block {
+  padding-bottom: 25px;
+}
+
+.page-title {
+  font-weight: bold;
+  color: black;
+}
+
+.site-title {
+  font-weight: 100;
+}
+
+.footnotes {
+	font-size: .85em;
+}
+
+.footnotes a {
+	box-shadow: none;
+	text-decoration: underline;
+	transition-property: color;
+}
+
+.footnotes a:hover {
+	background: transparent;
+}
+
+.footnotes a.footnote-return {
+	text-decoration: none;
+}
+
+.footnotes ol {
+	line-height: 1.8;
+}
+
+.footnote-ref a {
+	box-shadow: none;
+	text-decoration: none;
+	padding: 2px;
+	border-radius: 2px;
+}

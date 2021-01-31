@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+{{ partial "header.html" . }}
+
+<body>
+	<div class="container wrapper list">
+		{{ partial "head.html" . }}
+
+		{{ if isset .Data "Term" }}
+			<h2 class="page-title">{{ humanize .Data.Term }}</h2>
+		{{ else }}
+			<h2 class="page-title">{{ .Name }}</h1>
+		{{ end }}
+
+		{{ with .Content }}{{ . }}{{ end }}
+
+		{{- range .Data.Pages.GroupByDate "2006" }}
+		<div class="list-block">
+			<h4 class="h4-title"><strong>{{ .Key }}</strong></h4>
+			<ul class="posts">
+			{{- range .Pages -}}
+				{{- if (in (.Site.Params.excludedTypes | default (slice "page")) .Type) -}}
+				{{- else -}}
+				<li class="post">
+					<strong><a href="{{ .RelPermalink }}">{{.Title}}</a></strong>
+				</li>
+				{{- end -}}
+			{{- end -}}
+			</ul>
+			{{- range .Pages }}
+			{{- end}}
+		</div>
+		{{- end }}
+
+		{{ if not (isset .Data "Term") }}
+		<h4 class="h4-title"><strong>Categories</strong></h4>
+		<ul class="posts">
+			{{ range sort .Site.Taxonomies.categories }}
+				<li class="post">
+					<strong><a href="{{ .Page.Permalink }}">{{ title .Page.Title }}</a></strong>
+				</li>
+			{{ end }}
+		</ul>
+		{{ end }}
+	</div>
+
+	{{ partial "footer.html" . }}
+</body>
+
+</html>

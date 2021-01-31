@@ -1,0 +1,72 @@
+baseURL = "https://kndrck.co/"
+languageCode = "en-us"
+title = "Kendrick"
+theme = "ezhil"
+
+pygmentsstyle = "solarized-dark"
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
+
+paginate = 5
+
+enableEmoji = true
+googleAnalytics = "UA-71060764-2"
+
+[blackfriday]
+    smartypants = false
+    skipHTML = true
+
+[params]
+    dateform        = "Jan 2, 2006"
+    dateformShort   = "Jan 2"
+    dateformNum     = "2006-01-02"
+    dateformNumTime = "2006-01-02"
+
+    customCSS = "css/custom.css"
+
+    footerCopyright = '&copy; Kendrick Tan'
+
+[[params.social]]
+    name = "Twitter"
+    icon = "twitter"
+    url = "https://twitter.com/kendricktrh"
+
+[[params.social]]
+    name = "Github"
+    icon = "github"
+    url = "https://github.com/kendricktan"
+
+[[params.social]]
+    name = "Instagram"
+    icon = "instagram"
+    url = "https://instagram.com/mr.miso.oz"
+
+[menu]
+[[menu.main]]
+    name = "About"
+    url = "about/"
+    weight = 10
+
+[[menu.main]]
+    name = "Posts"
+    url = "posts/"
+    weight = 10
+
+[[menu.main]]
+    name = "Resume"
+    url = "https://goo.gl/m2EgR2"
+    weight = 10
+
+[[menu.main]]
+    name = "Talks"
+    url = "talks/"
+    weight = 10
+
+[[menu.main]]
+    name = "Wiki"
+    url = "wiki/"
+    weight = 10
+
+[taxonomies]
+    category = "categories"
+    tag = "tags"
