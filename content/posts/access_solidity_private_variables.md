@@ -43,6 +43,9 @@ const main = async () => {
     ethers.utils.solidityKeccak256(["uint256"], [1])
   );
 
+  // myBytes.length
+  const myBytesLength = await provider.getStorageAt(MY_CONTRACT_ADDR, 1);
+
   // myBytes[0]
   const myBytes0 = await provider.getStorageAt(MY_CONTRACT_ADDR, myBytesLoc);
 
