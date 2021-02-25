@@ -20,8 +20,8 @@ contract C {
     }
 
     MyStruct private myStruct; // Slot 2;
-    // Keccak256(2) + 0 = a;
-    // Keccak256(2) + 1 = b;
+    // Slot 2 + 0 = a;
+    // Slot 2 + 1 = b;
 }
 ```
 
@@ -53,17 +53,13 @@ const main = async () => {
   );
 
   // myStruct is located at Slot 2
-  const myStructLoc = ethers.BigNumber.from(
-    ethers.utils.solidityKeccak256(["uint256"], [2])
-  );
-
   // myStruct.a
-  const myStructA = await provider.getStorageAt(MY_CONTRACT_ADD, myStructLoc);
+  const myStructA = await provider.getStorageAt(MY_CONTRACT_ADD, 2);
 
   // myStruct.b
   const myStructB = await provider.getStorageAt(
     MY_CONTRACT_ADD,
-    myStructLoc.add(ONE)
+    3
   );
 };
 ```
