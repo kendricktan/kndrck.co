@@ -96,14 +96,16 @@ const main = async () => {
   // myAddrMapping is located at Slot 1
 
   // myAddrMapping[dai]
+  // Note it has to be uint256 as its padded
   const myAddrMappingDaiLoc = ethers.utils.solidityKeccak256(
-    ["address", "uint256"],
+    ["uint256", "uint256"],
     [dai, 1] // key, slot
   );
 
   // myAddrMapping[usdc]
+  // Note it has to be uint256 as its padded
   const myAddrMappingUsdcLoc = ethers.utils.solidityKeccak256(
-    ["address", "uint256"],
+    ["uint256", "uint256"],
     [usdc, 1] // key, slot
   );
 
