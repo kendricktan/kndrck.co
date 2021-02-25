@@ -1,6 +1,6 @@
 ---
 title: Accessing Internal/Private Variables In Solidity
-date: 2021-02-26
+date: 2021-02-25
 author: Kendrick Tan
 categories: ["ethereum", "solidity"]
 ---
@@ -24,6 +24,8 @@ contract C {
     // Keccak256(2) + 1 = b;
 }
 ```
+
+###
 
 ```javascript
 const ethers = require("ethers");
@@ -75,6 +77,8 @@ contract C {
     mapping(uint256 => address) myUintMapping; // Slot 2
 }
 ```
+
+###
 
 ```javascript
 const ethers = require("ethers");
