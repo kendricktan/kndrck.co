@@ -2,6 +2,6 @@
 title = "About"
 +++
 
-Currently hacking on DeFi.
+Currently hacking on Ethereum.
 
-Feel free to email me at `me at kndrck.co`.
+Feel free to email me at `kendricktrh at gmail.com`.
